@@ -1,0 +1,13 @@
+spring:
+  application.name: narochny
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/narochny-db
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  # Включение Flyway (по умолчанию true, но лучше зафиксировать)
+  flyway.enabled: true
+
+
