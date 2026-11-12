@@ -17,12 +17,4 @@ public record Notification(
     public static Notification newIncoming(String userId, Channel channel, Priority priority, String body) {
         return new Notification(null, userId, channel, priority, body, NotificationStatus.ACCEPTED, null, null, null);
     }
-
-    public Notification withId(UUID newId) {
-        return new Notification(newId, userId, channel, priority, body, status, sentAt, createdAt, updatedAt);
-    }
-
-    public Notification withStatus(NotificationStatus newStatus) {
-        return new Notification(id, userId, channel, priority, body, newStatus, sentAt, createdAt, updatedAt);
-    }
 }

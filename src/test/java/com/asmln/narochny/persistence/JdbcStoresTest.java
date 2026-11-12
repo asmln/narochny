@@ -55,7 +55,7 @@ public class JdbcStoresTest {
                 "req-1", n.id(), "sha256:abc", 202,
                 "{\"status\":\"ACCEPTED\"}", expiresAt));
 
-        var found = tx.execute(s ->
+        var found = tx.execute(_ ->
                 keyStore.findByKey("req-1").orElseThrow());
 
         assertThat(found.notificationId()).isEqualTo(n.id());
